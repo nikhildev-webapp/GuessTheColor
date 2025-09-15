@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Color Guess Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="container" role="application" aria-label="Color guess game">
+      <header>
+        <div class="title">
+          <div class="logo">CG</div>
+          <div>
+            <h1>Color Guess — Guess the color!</h1>
+            <p class="lead">Pick the square that matches the RGB value shown. Friendly, animated and responsive.</p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="top-info">
+            <div class="color-display" id="targetColor">rgb(?, ?, ?)</div>
+            <div class="status" id="message">Good luck</div>
+          </div>
+
+          <div style="width:12px"></div>
+          <div class="toggle" role="tablist" aria-label="difficulty">
+            <button id="easyBtn">Easy</button>
+            <button id="hardBtn" class="active">Hard</button>
+          </div>
+
+          <button class="btn" id="resetBtn">New Colors</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="left">
+          <div class="palette" id="palette" aria-live="polite">
+            <!-- color swatches injected here -->
+          </div>
+
+          <div class="footer-card">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="hint">Tip: You can click the RGB label to copy it to clipboard.</div>
+          </div>
+        </section>
+
+        <aside class="right">
+          <div style="padding:14px;border-radius:12px;background:var(--card);border:1px solid rgba(255,255,255,0.03)">
+            <h3 style="margin:0 0 10px 0">How to play</h3>
+            <ol style="padding-left:18px;margin:0 0 10px 0;color:rgba(230,238,248,0.85)">
+              <li>Look at the RGB value above.</li>
+              <li>Click the swatch that matches the color.</li>
+              <li>Correct answer increases score and reveals cool animation.</li>
+            </ol>
+            <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+              <button class="btn primary" id="playAgain">Play Again</button>
+              <button class="btn" id="resetScore">Reset Score</button>
+            </div>
+          </div>
+
+          <div class="footer-card" style="margin-top:12px">
+            <div style="font-weight:700">Game Settings</div>
+            <div class="small" style="margin-top:8px">Squares: <span id="squareCount">6</span></div>
+            <div class="copy-tip" style="margin-top:6px">Accessible and keyboard friendly — use tab + enter</div>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </div>
+
+ <script src="app.js
+ "></script>
+</body>
+</html>
